@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/css/intlTelInput.css">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              theme1 : '#008EC8',
+              theme2 : '#FF0E2E',
+              theme1Hover : '#00a3e6',
+              secondary : '#5E5E5E'
+            },
+            container: {
+              center: true, 
+              padding: '1rem', 
+              screens: {
+                sm: '100%',
+                md: '640px', 
+                lg: '768px', 
+                xl: '1024px', 
+                '2xl': '1284px', 
+              },
+            },
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        font-family: "Mulish";
+      }
+      .container_outer {
+        /* @apply px-4 */
+        padding-inline: 1rem;
+      }
+      .iti--separate-dial-code .iti__selected-flag {
+        background: transparent;
+        padding-left: 2rem;
+        padding-right: 1.25rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container_outer py-5">
+      <div class="container">
+        <div class="grid grid-cols-2 gap-4">
+          <div class="col-span-1">
+            <div class="rounded-2xl overflow-hidden w-full h-full aspect-[1.45]">
+              <img class="size-full object-cover" src="./assets/img/school1.png" alt="">
+            </div>
+          </div>
+          <div class="col-span-1">
+            <div class="grid grid-cols-2 gap-4">
+                <div class="col-span-2">
+                  <div class="rounded-2xl overflow-hidden w-full aspect-[3.02]">
+                    <img class="size-full object-cover" src="./assets/img/school2.png" alt="">
+                  </div>
+                </div>
+                <div class="col-span-1">
+                  <div class="rounded-2xl overflow-hidden w-full aspect-[1.45]">
+                    <img class="size-full object-cover" src="./assets/img/school3.png" alt="">
+                  </div>
+                </div>
+                <div class="col-span-1">
+                  <div class="rounded-2xl overflow-hidden w-full aspect-[1.45] relative">
+                    <img class="size-full object-cover" src="./assets/img/school4.png" alt="">
+                    <div class="absolute right-0 bottom-4 bg-[#1C1B1F] text-white rounded-lg p-2 text-base flex items-center gap-1.5 cursor-pointer">
+                      <img src="./assets/img/broken_image.png" class="h-4 object-contain" alt="">
+                      View Gallery
+                    </div>
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container_outer">
+      <div class="container">
+        <div class="flex gap-4 justify-between">
+          <div class="max-w-[48%]">
+            <div class="text-[2.5rem] font-bold leading-[3.318rem]">Saint  Xavior’s Sr, Sec School</div>
+            <div class="flex gap-3.5 items-start text-base text-secondary font-semibold leading-[1.938rem]">
+              <img class="h-[1.125rem] object-contain mt-2" src="./assets/img/distance.png" alt="">
+              WR76+86X, Bhagwan Das Rd, Panch Batti, C Scheme, Ashok Nagar, Jaipur, Rajasthan 302001
+            </div>
+          </div>
+          <div class="flex gap-5">
+            <button class="h-10 w-10 rounded-full bg-white flex items-center justify-center shadow-[0px_4px_4px_0px_#00000040] transition-all duration-300 ease-out hover:-translate-y-2">
+              <img class="h-[1.125rem] object-contain" src="./assets/img/share.png" alt="">
+            </button>
+            <button class="h-10 w-10 rounded-full bg-white flex items-center justify-center shadow-[0px_4px_4px_0px_#00000040] transition-all duration-300 ease-out hover:-translate-y-2">
+              <img class="h-[1.125rem] object-contain" src="./assets/img/favorite.png" alt="">
+            </button>
+          </div>
+        </div>
+        <div class="flex gap-4 py-4">
+          <div class="">
+            <div class="text-secondary text-xs font-medium">Fee per Year</div>
+            <div class="text-secondary text-xl font-extrabold">₹2.50-3.0 Lakh</div>
+          </div>
+          <div class="flex items-center gap-2.5 px-8">
+            <span class="text-base text-white font-medium bg-[#3D923A] flex items-center px-3 py-1 gap-2 rounded-full">
+              <img class="h-[1.125rem] object-contain" src="./assets/img/star_white.png" alt="">
+              4.1
+            </span>
+            <span class="text-secondary text-base font-semibold">8,763 Reviews </span>
+          </div>
+          <button class="border border-[#078EFD] text-[#078EFD] text-base flex items-center gap-2 rounded-lg px-4 py-3 font-bold transition-all duration-300 ease-out group hover:bg-[#078EFD] hover:text-white">
+            <img class="h-[1.125rem] object-contain group-hover:brightness-[1000]" src="./assets/img/explore.png" alt="">
+            Get Direction
+          </button>
+          <div class="flex-1 flex justify-end">
+            <button class="bg-theme1 text-white text-base flex items-center gap-2 rounded-lg px-4 py-3 font-bold transition-all duration-300 ease-out hover:bg-theme1Hover">
+              <img class="h-4 object-contain" src="./assets/img/call.png" alt="">
+              Call Now
+            </button>
+          </div>
+        </div>
+        <div class="grid auto-cols-max grid-flow-col gap-7 pt-4">
+          <div class="flex gap-3">
+            <img class="h-8 w-8 object-contain" src="./assets/img/transgender.png" alt="">
+            <div class="">
+              <div class="text-secondary text-base font-medium">Gender Classifican</div>
+              <div class="text-secondary text-xl font-extrabold">Co-Ed</div>
+            </div>
+          </div>
+          <div class="flex gap-3">
+            <img class="h-8 w-8 object-contain" src="./assets/img/import_contacts.png" alt="">
+            <div class="">
+              <div class="text-secondary text-base font-medium">Affiliated Board</div>
+              <div class="text-secondary text-xl font-extrabold">CBSE</div>
+            </div>
+          </div>
+          <div class="flex gap-3">
+            <img class="h-7 w-7 object-contain" src="./assets/img/for_you.png" alt="">
+            <div class="">
+              <div class="text-secondary text-base font-medium">Number of Students</div>
+              <div class="text-secondary text-xl font-extrabold">1200-1500</div>
+            </div>
+          </div>
+          <div class="flex gap-3">
+            <img class="h-8 w-8 object-contain" src="./assets/img/school.png" alt="">
+            <div class="">
+              <div class="text-secondary text-base font-medium">Grade</div>
+              <div class="text-secondary text-xl font-extrabold">Class 1-12</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container_outer py-12">
+      <div class="container">
+        <ul class="flex items-center gap-12">
+          <li>
+            <a class="text-xl text-secondary font-medium pb-2.5 border-b-4 border-transparent hover:border-theme2 [&.active]:border-theme2 active" href="">About</a>
+          </li>
+          <li>
+            <a class="text-xl text-secondary font-medium pb-2.5 border-b-4 border-transparent hover:border-theme2 [&.active]:border-theme2" href="">Key Features</a>
+          </li>
+          <li>
+            <a class="text-xl text-secondary font-medium pb-2.5 border-b-4 border-transparent hover:border-theme2 [&.active]:border-theme2" href="">Co-Curricular Activities</a>
+          </li>
+          <li>
+            <a class="text-xl text-secondary font-medium pb-2.5 border-b-4 border-transparent hover:border-theme2 [&.active]:border-theme2" href="">Fee Structure</a>
+          </li>
+          <li>
+            <a class="text-xl text-secondary font-medium pb-2.5 border-b-4 border-transparent hover:border-theme2 [&.active]:border-theme2" href="">Reviews</a>
+          </li>
+          <li>
+            <a class="text-xl text-secondary font-medium pb-2.5 border-b-4 border-transparent hover:border-theme2 [&.active]:border-theme2" href="">Nearby</a>
+          </li>
+          <li>
+            <a class="text-xl text-secondary font-medium pb-2.5 border-b-4 border-transparent hover:border-theme2 [&.active]:border-theme2" href="">Contact</a>
+          </li>
+          <li>
+            <a class="text-xl text-secondary font-medium pb-2.5 border-b-4 border-transparent hover:border-theme2 [&.active]:border-theme2" href="">FAQs</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="container_outer pb-12">
+      <div class="container">
+        <div class="grid grid-cols-12 gap-4">
+          <div class="col-span-7">
+            <div class="border border-[#DBCFCF] rounded-lg p-6 mb-5">
+              <div class="text-[1.875rem] font-bold">About School</div>
+              <div class="text-base font-semibold text-secondary leading-8">Welham Boys' School is a residential school for boys, in Dehra Dun, affiliated to the C.B.S.E., India. Nestled in the foothills of the Himalayas over an area of 30 acres, the school lies amidst the hills and rivers of the Doon valley. Students from varying backgrounds and from many different parts of the sub-continent and beyond, attend the school. 
+                <span class="text-[#078EFD] cursor-pointer underline">Read More</span>
+              </div>
+            </div>
+            <div class="border border-[#DBCFCF] rounded-lg p-6 mb-5">
+              <div class="text-[1.875rem] font-bold mb-6">Key Features</div>
+              <div class="grid grid-cols-4 gap-x-4 gap-y-8">
+                <div class="flex gap-3">
+                  <img class="h-6 w-6 object-contain" src="./assets/img/account_balance.png" alt="">
+                  <div class="">
+                    <div class="text-secondary text-base font-medium">Establishment</div>
+                    <div class="text-secondary text-xl font-extrabold">1997</div>
+                  </div>
+                </div>
+                <div class="flex gap-3">
+                  <img class="h-6 w-6 object-contain" src="./assets/img/voice_chat.png" alt="">
+                  <div class="">
+                    <div class="text-secondary text-base font-medium">Medium</div>
+                    <div class="text-secondary text-xl font-extrabold">English</div>
+                  </div>
+                </div>
+                <div class="flex gap-3">
+                  <img class="h-6 w-6 object-contain" src="./assets/img/kitchen.png" alt="">
+                  <div class="">
+                    <div class="text-secondary text-base font-medium">Water Cooler</div>
+                    <div class="text-secondary text-xl font-extrabold">Yes</div>
+                  </div>
+                </div>
+                <div class="flex gap-3">
+                  <img class="h-6 w-6 object-contain" src="./assets/img/climate_mini_split.png" alt="">
+                  <div class="">
+                    <div class="text-secondary text-base font-medium">AC Classes</div>
+                    <div class="text-secondary text-xl font-extrabold">Yes</div>
+                  </div>
+                </div>
+                <div class="flex gap-3">
+                  <img class="h-6 w-6 object-contain" src="./assets/img/fitness_center.png" alt="">
+                  <div class="">
+                    <div class="text-secondary text-base font-medium">Gym</div>
+                    <div class="text-secondary text-xl font-extrabold">No</div>
+                  </div>
+                </div>
+                <div class="flex gap-3">
+                  <img class="h-6 w-6 object-contain" src="./assets/img/nest_remote_comfort_sensor.png" alt="">
+                  <div class="">
+                    <div class="text-secondary text-base font-medium">Free Wi-Fi</div>
+                    <div class="text-secondary text-xl font-extrabold">Yes</div>
+                  </div>
+                </div>
+                <div class="flex gap-3">
+                  <img class="h-6 w-6 object-contain" src="./assets/img/local_fire_department.png" alt="">
+                  <div class="">
+                    <div class="text-secondary text-base font-medium">Fire Safety</div>
+                    <div class="text-secondary text-xl font-extrabold">Yes</div>
+                  </div>
+                </div>
+                <div class="flex gap-3">
+                  <img class="h-6 w-6 object-contain" src="./assets/img/directions_bus.png" alt="">
+                  <div class="">
+                    <div class="text-secondary text-base font-medium">Transport</div>
+                    <div class="text-secondary text-xl font-extrabold">Within 10 Kms</div>
+                  </div>
+                </div>
+              </div>
+              <div class="flex justify-center mt-8">
+                <button class="text-theme2 text-base font-semibold flex items-center gap-1.5">
+                  View All
+                  <img class="h-2 object-contain" src="./assets/img/down_arrow_red.png" alt="">
+                </button>
+              </div>
+            </div>
+            <div class="border border-[#DBCFCF] rounded-lg p-6 mb-5">
+              <div class="text-[1.875rem] font-bold">Co- Curricular Activities</div>
+              <div class="text-xl font-extrabold text-secondary flex items-center gap-2 mt-6">
+                <img class="h-5 w-5 object-contain" src="./assets/img/trophy.png" alt="">
+                Outdoor Sports
+              </div>
+              <div class="flex mt-4 gap-6">
+                <div class="flex bg-[#F9F3EA] rounded-lg text-base font-medium text-secondary px-6 py-3 gap-2.5">
+                  <img class="h-5 w-5 object-contain" src="./assets/img/sports_cricket.png" alt="">
+                  Cricket
+                </div>
+                <div class="flex bg-[#F9F3EA] rounded-lg text-base font-medium text-secondary px-6 py-3 gap-2.5">
+                  <img class="h-5 w-5 object-contain" src="./assets/img/sports_tennis.png" alt="">
+                  Badminton
+                </div>
+                <div class="flex bg-[#F9F3EA] rounded-lg text-base font-medium text-secondary px-6 py-3 gap-2.5">
+                  <img class="h-5 w-5 object-contain" src="./assets/img/sports_basketball.png" alt="">
+                  Basketball
+                </div>
+              </div>
+              <div class="text-xl font-extrabold text-secondary flex items-center gap-2 mt-6">
+                <img class="h-5 w-5 object-contain" src="./assets/img/sports_esports.png" alt="">
+                Indoor Games
+              </div>
+              <div class="flex mt-4 gap-6">
+                <div class="flex bg-[#F9F3EA] rounded-lg text-base font-medium text-secondary px-6 py-3 gap-2.5">
+                  <img class="h-5 w-5 object-contain" src="./assets/img/table_restaurant.png" alt="">
+                  Table Tennis
+                </div>
+              </div>
+              <div class="text-xl font-extrabold text-secondary flex items-center gap-2 mt-6">
+                <img class="h-5 w-5 object-contain" src="./assets/img/interests.png" alt="">
+                Art and Performance
+              </div>
+              <div class="flex mt-4 gap-6">
+                <div class="flex bg-[#F9F3EA] rounded-lg text-base font-medium text-secondary px-6 py-3 gap-2.5">
+                  <img class="h-5 w-5 object-contain" src="./assets/img/palette.png" alt="">
+                  Painting
+                </div>
+              </div>
+            </div>
+            <div class="border border-[#DBCFCF] rounded-lg p-6 mb-5">
+              <div class="grid grid-cols-12 gap-3 mb-2">
+                <div class="col-span-9">
+                  <div class="text-[1.875rem] font-bold">Fee Structure</div>
+                  <div class="text-secondary text-xl font-extrabold">CBSE Board Fee Structure for Indian Nationals</div>
+                </div>
+                <div class="col-span-3">
+                  <select class="border border-[#DBCFCF] rounded-lg w-full px-6 py-3 outline-theme1 mb-6">
+                    <option value="">Class 10</option>
+                    <option value="">Class 10</option>
+                    <option value="">Class 10</option>
+                    <option value="">Class 10</option>
+                    <option value="">Class 10</option>
+                  </select>
+                </div>
+              </div>
+              <div class="flex items-center justify-between py-3">
+                <div class="text-secondary text-base font-medium">Admission Application </div>
+                <div class="text-secondary text-xl font-extrabold">₹20,000</div>
+              </div>
+              <div class="flex items-center justify-between py-3">
+                <div class="text-secondary text-base font-medium">Security Deposit </div>
+                <div class="text-secondary text-xl font-extrabold">₹15,000</div>
+              </div>
+              <div class="flex items-center justify-between py-3">
+                <div class="text-secondary text-base font-medium">Other Payments  </div>
+                <div class="text-secondary text-xl font-extrabold">₹30,000</div>
+              </div>
+              <div class="flex items-center justify-between py-3">
+                <div class="text-secondary text-base font-medium">Yearly School Fee  </div>
+                <div class="text-secondary text-xl font-extrabold">₹64,500</div>
+              </div>
+              <div class="flex items-center justify-between pt-6">
+                <div class="text-secondary text-xl font-medium">Total Payable Amount </div>
+                <div class="text-secondary text-2xl font-extrabold">₹1,64,500</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-span-5">
+            <div class="border border-[#DBCFCF] rounded-lg p-6 mb-5">
+              <div class="text-[1.875rem] font-bold">Book Free Counselling</div>
+              <div class="tex-xl font-extrabold text-secondary mb-6">Thu, 16 Jan 25, 10:00 AM</div>
+              <input class="border border-[#DBCFCF] rounded-lg w-full px-8 py-4 outline-theme1 mb-6" type="text" placeholder="Enter Your Name">
+              <div class="mb-6 [&_.iti]:w-full">
+                <input class="border border-[#DBCFCF] rounded-lg w-full px-8 py-4 outline-theme1 " type="text" id="mobile_code" placeholder="Enter Mobile No">
+              </div>
+              <select class="border border-[#DBCFCF] rounded-lg w-full px-8 py-4 outline-theme1 mb-6">
+                <option value="">Day School</option>
+                <option value="">Day School</option>
+                <option value="">Day School</option>
+                <option value="">Day School</option>
+                <option value="">Day School</option>
+              </select>
+              <textarea class="border border-[#DBCFCF] rounded-lg w-full px-8 py-4 outline-theme1 mb-6 min-h-44"></textarea>
+              <button class="bg-theme1 text-white w-full py-3 rounded-lg text-xl font-extrabold transition-all duration-300 ease-out hover:bg-theme1Hover">Submit </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/js/intlTelInput-jquery.min.js"></script>
+    <script>
+      // -----Country Code Selection
+      $("#mobile_code").intlTelInput({
+        initialCountry: "in",
+        separateDialCode: true,
+        // utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/11.0.4/js/utils.js"
+      });
+    </script>
+  </body>
+</html>
